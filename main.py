@@ -24,7 +24,6 @@ for container in data:
     data_for_db_sub.append(deep_get(container, "name"))
     data_for_db_sub.append(deep_get(container, "state.cpu.usage"))
     data_for_db_sub.append(deep_get(container, "state.memory.usage"))
-    print("created at get:", deep_get(container, "created_at"))
     # Convert local datetime to UTC time-zone datetime
     dt_str.append(deep_get(container, "created_at"))
     local_dt = datetime.strptime(dt_str[0], format_time)
