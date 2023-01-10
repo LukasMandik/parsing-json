@@ -8,11 +8,11 @@ from db_info import db_host, db_name, db_port, db_username, db_password
 with open('sample-data.json') as json_file:
     data = json.load(json_file)
 
-    data_for_db_sub = []
-    data_for_db = []
-    unavailable_data = "unavailable data"
-    dt_str = []
-    format_time = "%Y-%m-%dT%H:%M:%S%f%z"
+data_for_db_sub = []
+data_for_db = []
+unavailable_data = "unavailable data"
+dt_str = []
+format_time = "%Y-%m-%dT%H:%M:%S%f%z"
 
 for container in data:
     print("name:", container["name"])
